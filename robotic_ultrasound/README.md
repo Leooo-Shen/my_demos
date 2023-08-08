@@ -5,10 +5,18 @@
  
 ## Features
 ### Initial Point Detection
-![image](https://github.com/Leooo-Shen/my_demos/assets/67741666/472f6830-2fb8-45bb-9125-5bb855887212)
+<img src="assets/point_detection.gif" alt="Image" width="800">
 
 
 ### Shadow Detection
+<img src="assets/shadow.png" alt="Image" width="800">
+
 
 ### Dynamic Trajectory Planning
+#### Force adpation
+<img src="assets/force.png" alt="Image" width="800">
+
+#### Trajectory planning with sweeping motion
+<img src="assets/sweep.png" alt="Image" width="800">
+
 
