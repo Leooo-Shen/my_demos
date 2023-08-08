@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<launch>
+
+
+    <!-- <arg name="load_robot_description" default="true"/>
+    <arg name="robot_name" default="iiwa"/>
+    <arg name="model" default="iiwa7"/>
+    <arg name="hardware_interface" default="PositionJointInterface"/>
+
+    <group if="$(arg load_robot_description)">
+        <include file="$(find iiwa_description)/launch/$(arg model)_upload.launch">
+        <arg name="hardware_interface" value="$(arg hardware_interface)"/>
+        <arg name="robot_name" value="$(arg robot_name)" />
+        </include>
+    </group> -->
+
+    <!-- realsense initialization -->
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch" >
+        <arg name="align_depth" value="true" />
+        <arg name="filters" value="pointcloud" />
+    </include>
+
+    <!-- perform eye-in-hand calibration -->
+    <node name="gui_handeye_cali_node" pkg="franka_handeye_cali" type="gui_handeye_cali.py" args="" required="true" />
+
+</launch>
